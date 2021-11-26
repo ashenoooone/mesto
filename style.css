@@ -10,8 +10,16 @@
   font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 .header {
+  box-sizing: border-box;
+  margin: 45px auto 0;
+  max-width: 880px;
+  padding: 0 27px;
+  height: 74px;
+  border-bottom: 1px solid #545454;
 }
 .logo {
+  max-width: 100%;
+  width: 142px;
 }
 .content {
 }
