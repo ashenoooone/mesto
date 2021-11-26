@@ -38,6 +38,7 @@
   max-width: 880px;
   margin: 0 auto;
 }
+/* profile */
 .profile__person {
   display: flex;
 }
@@ -66,6 +67,7 @@
   margin: 0 18px 0 0;
 }
 .profile__edit-button {
+  cursor: pointer;
   width: 24px;
   height: 24px;
   background-image: url(./images/Edit\ Button.svg);
@@ -90,6 +92,23 @@
   margin: 0;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 .footer {
+}
+/* elements */
+.elements {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 361px);
+}
+.elements__element {
+}
+.elements__image {
+}
+.elements__info {
+}
+.elements__title {
+  margin: 0;
+}
+.elements__like-button {
 }
