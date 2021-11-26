@@ -8,9 +8,18 @@
   min-width: 320px;
   margin: 0 auto;
   font-family: "Inter", Arial, Helvetica, sans-serif;
+  display: grid;
+  flex-shrink: 0;
+}
+.page__header {
+  box-sizing: border-box;
+  width: 100%;
+}
+.content__section {
+  width: 100%;
+  box-sizing: border-box;
 }
 .header {
-  box-sizing: border-box;
   margin: 45px auto 0;
   max-width: 880px;
   padding: 0 27px;
