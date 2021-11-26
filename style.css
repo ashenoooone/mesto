@@ -1,0 +1,39 @@
+.body {
+  background-color: #000;
+}
+.page {
+  color: #fff;
+  background-color: #000;
+  max-width: 1280px;
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+.header {
+}
+.logo {
+}
+.content {
+}
+.profile {
+}
+.content__section {
+}
+.profile__person {
+}
+.profile__avatar {
+}
+.profile__info {
+}
+.profile__container {
+}
+.profile__name {
+}
+.profile__edit-button {
+}
+.profile__activity {
+}
+.profile__add-button {
+}
+.footer {
+}
