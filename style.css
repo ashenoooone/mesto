@@ -145,3 +145,21 @@
   height: 19px;
   background-position: center;
 }
+/* footer */
+.footer__copyright {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.22;
+  margin: 0 auto;
+  color: #545454;
+  max-width: 880px;
+}
+.footer {
+  text-align: left;
+}
+@media screen and (min-width: 1280px) {
+  .elements {
+    max-width: 880px;
+  }
+}
