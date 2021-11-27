@@ -1,1 +1,6 @@
-.content__section
+.content__section {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 880px;
+}

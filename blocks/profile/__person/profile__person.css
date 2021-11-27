@@ -1,1 +1,3 @@
-.profile__person
+.profile__person {
+  display: flex;
+}
