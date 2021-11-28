@@ -17,3 +17,9 @@
 .form__save-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+@media screen and (max-width: 767px) {
+  .form__save-button {
+    width: 238px;
+    height: 46px;
+  }
+}

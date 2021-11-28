@@ -3,6 +3,7 @@ const formOpenButton = document.querySelector(".profile__edit-button");
 const formCloseButton = document.querySelector(".form__close-button");
 const formSaveButton = document.querySelector(".form__save-button");
 const likeButtons = document.querySelectorAll(".elements__like-button");
+const formOverlay = document.querySelector(".form__overlay");
 
 function formOpen() {
   form.classList.add("form_active");
@@ -27,6 +28,7 @@ function formSubmit(evt) {
 formOpenButton.addEventListener("click", formOpen);
 formCloseButton.addEventListener("click", formClose);
 form.addEventListener("submit", formSubmit);
+formOverlay.addEventListener("click", formClose);
 likeButtons.forEach((item) => {
   item.addEventListener("click", (likeClick) => {
     item.classList.toggle("elements__like-button_active");

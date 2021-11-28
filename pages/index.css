@@ -45,5 +45,6 @@
 @import url(../blocks/form/__activity/form__activity.css);
 @import url(../blocks/form/__close-button/form__close-button.css);
 @import url(../blocks/form/_active/form_active.css);
+@import url(../blocks/form/__overlay/form__overlay.css);
 /* hidden */
 @import url(../blocks/hidden/hidden.css);

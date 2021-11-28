@@ -9,4 +9,9 @@
   border-bottom: 1px solid #000000;
   width: 100%;
   box-sizing: border-box;
+  outline: 0;
+}
+.form__activity:focus {
+  border: 0;
+  box-shadow: 0px 0px 4px 4px rgb(116, 147, 238);
 }
