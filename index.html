@@ -28,7 +28,7 @@
               <p class="profile__activity">Исследователь океана</p>
             </div>
           </div>
-          <button class="profile__add-button"></button>
+          <button class="profile__add-button" type="button"></button>
         </section>
         <section class="elements">
           <div class="elements__element">
@@ -39,7 +39,7 @@
             />
             <div class="elements__info">
               <h2 class="elements__title">Карачаевск</h2>
-              <button class="elements__like-button"></button>
+              <button class="elements__like-button" class="button"></button>
             </div>
           </div>
           <div class="elements__element">
@@ -50,7 +50,7 @@
             />
             <div class="elements__info">
               <h2 class="elements__title">Гора Эльбрус</h2>
-              <button class="elements__like-button"></button>
+              <button class="elements__like-button" type="button"></button>
             </div>
           </div>
           <div class="elements__element">
@@ -61,7 +61,7 @@
             />
             <div class="elements__info">
               <h2 class="elements__title">Домбай</h2>
-              <button class="elements__like-button"></button>
+              <button class="elements__like-button" type="button"></button>
             </div>
           </div>
           <div class="elements__element">
@@ -72,7 +72,7 @@
             />
             <div class="elements__info">
               <h2 class="elements__title">Гора Эльбрус</h2>
-              <button class="elements__like-button"></button>
+              <button class="elements__like-button" type="button"></button>
             </div>
           </div>
           <div class="elements__element">
@@ -83,7 +83,7 @@
             />
             <div class="elements__info">
               <h2 class="elements__title">Домбайк</h2>
-              <button class="elements__like-button"></button>
+              <button class="elements__like-button" type="button"></button>
             </div>
           </div>
           <div class="elements__element">
@@ -94,7 +94,7 @@
             />
             <div class="elements__info">
               <h2 class="elements__title">Карачаево-Черкессия</h2>
-              <button class="elements__like-button"></button>
+              <button class="elements__like-button" type="button"></button>
             </div>
           </div>
         </section>
@@ -103,5 +103,21 @@
         <h2 class="footer__copyright">© 2020 Роман Гонтарь</h2>
       </footer>
     </div>
+    <form class="form">
+      <div class="form__inner">
+        <button class="form__close-button" type="button"></button>
+        <h2 class="form__title">Редактировать профиль</h2>
+        <input type="text" value="Жак-Ив Кусто" class="form__name" />
+        <input
+          type="text"
+          value="Исследователь океана"
+          class="form__activity"
+        />
+        <button type="submit" class="form__save-button" value="Сохранить">
+          Сохранить
+        </button>
+      </div>
+    </form>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
