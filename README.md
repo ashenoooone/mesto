@@ -2,4 +2,4 @@
 
 ## Описание проекта и его функциональности.
 Проект адаптивного сайта с использованием JavaScript и медиазапросов.
-GH Pages: https://ashenoooone.github.io/mesto/
+### GH Pages: https://ashenoooone.github.io/mesto/
