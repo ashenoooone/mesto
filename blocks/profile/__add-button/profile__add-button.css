@@ -7,6 +7,13 @@
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-  overflow: auto;
+  background-size: cover;
   flex-shrink: 0;
+}
+@media screen and (max-width: 767px) {
+  .profile__add-button {
+    width: 282px;
+    background-image: url(../../../images/Add\ Button-767.svg);
+    flex-shrink: 0;
+  }
 }

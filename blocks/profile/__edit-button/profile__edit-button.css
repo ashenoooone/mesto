@@ -8,4 +8,12 @@
   padding: 0;
   background-color: transparent;
   align-self: baseline;
+  background-size: cover;
+}
+@media screen and (max-width: 767px) {
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
 }

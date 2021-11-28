@@ -5,3 +5,9 @@
   box-sizing: border-box;
   justify-content: center;
 }
+@media screen and (max-width: 767px) {
+  .profile__info {
+    padding: 26px 0 36px;
+    align-items: center;
+  }
+}
