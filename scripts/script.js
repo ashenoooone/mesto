@@ -30,7 +30,7 @@ formCloseButton.addEventListener("click", formClose);
 form.addEventListener("submit", formSubmit);
 formOverlay.addEventListener("click", formClose);
 likeButtons.forEach((item) => {
-  item.addEventListener("click", (likeClick) => {
+  item.addEventListener("click", () => {
     item.classList.toggle("elements__like-button_active");
   });
 });
