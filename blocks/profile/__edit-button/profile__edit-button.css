@@ -10,6 +10,7 @@
   transition: opacity 0.2s ease;
   flex-shrink: 0;
   background-size: cover;
+  display: flex;
 }
 .profile__edit-button:hover {
   opacity: 0.6;

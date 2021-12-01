@@ -1,3 +1,4 @@
 .page__footer {
   padding: 0 19px;
+  box-sizing: border-box;
 }
