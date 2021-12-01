@@ -7,6 +7,7 @@
   flex-direction: column;
   padding: 45px 200px 60px;
   position: relative;
+  min-height: 100vh;
 }
 @media screen and (max-width: 767px) {
   .page {
