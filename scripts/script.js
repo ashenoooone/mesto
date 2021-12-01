@@ -10,8 +10,8 @@ const profileActivity = document.querySelector(".profile__activity");
 
 function formOpen() {
   form.classList.add("form_active");
-  formName = profileName;
-  formActivity = profileActivity;
+  formName.value = profileName.textContent;
+  formActivity.value = profileActivity.textContent;
 }
 
 function formClose() {
