@@ -100,25 +100,28 @@
         </section>
       </main>
       <footer class="footer page__footer">
-        <h2 class="footer__copyright">© 2020 Роман Гонтарь</h2>
+        <p class="footer__copyright">© 2020 Роман Гонтарь</p>
       </footer>
     </div>
-    <form class="form">
-      <div class="form__overlay"></div>
-      <div class="form__inner">
+    <div class="form">
+      <form class="form__inner">
         <button class="form__close-button" type="button"></button>
         <h2 class="form__title">Редактировать профиль</h2>
-        <input type="text" value="Жак-Ив Кусто" class="form__name" />
+        <input
+          type="text"
+          value="Жак-Ив Кусто"
+          class="form__input form__input_type_name"
+        />
         <input
           type="text"
           value="Исследователь океана"
-          class="form__activity"
+          class="form__input form__input_type_activity"
         />
         <button type="submit" class="form__save-button" value="Сохранить">
           Сохранить
         </button>
-      </div>
-    </form>
+      </form>
+    </div>
     <script src="./scripts/script.js"></script>
   </body>
 </html>

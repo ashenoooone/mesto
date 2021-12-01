@@ -41,11 +41,12 @@
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__title/form__title.css);
 @import url(../blocks/form/__save-button/form__save-button.css);
-@import url(../blocks/form/__name/form__name.css);
 @import url(../blocks/form/__inner/form__inner.css);
-@import url(../blocks/form/__activity/form__activity.css);
 @import url(../blocks/form/__close-button/form__close-button.css);
 @import url(../blocks/form/_active/form_active.css);
 @import url(../blocks/form/__overlay/form__overlay.css);
+@import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__input/_type/form__input_type_name.css);
+@import url(../blocks/form/__input/_type/form__input_type_activity.css);
 /* hidden */
 @import url(../blocks/hidden/hidden.css);
