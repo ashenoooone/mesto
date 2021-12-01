@@ -1,12 +1,12 @@
 .form__save-button {
   padding: 0;
-  margin: 0;
+  margin: 48px 0 0 0;
   border: 0;
   width: 358px;
   height: 50px;
   font-size: 18px;
   font-style: normal;
-  line-height: 22px;
+  line-height: 1.23;
   text-align: center;
   background-color: #000;
   color: #fff;
@@ -20,6 +20,8 @@
 @media screen and (max-width: 767px) {
   .form__save-button {
     width: 238px;
+    margin: 45px 0 0 0;
     height: 46px;
+    font-size: 14px;
   }
 }
