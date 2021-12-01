@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   background-color: transparent;
-  align-self: baseline;
   transition: opacity 0.2s ease;
   flex-shrink: 0;
   background-size: cover;
