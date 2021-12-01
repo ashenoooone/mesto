@@ -6,3 +6,8 @@
   row-gap: 20px;
   margin: 50px auto 71px;
 }
+@media screen and (max-width: 767px) {
+  .elements {
+    margin: 36px 0 48px;
+  }
+}
