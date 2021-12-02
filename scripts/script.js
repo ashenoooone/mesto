@@ -19,11 +19,17 @@ function formClose() {
 }
 function formSubmit(evt) {
   evt.preventDefault();
-
   profileName.textContent = formName.value;
   profileActivity.textContent = formActivity.value;
   formClose();
 }
 formOpenButton.addEventListener("click", formOpen);
-formCloseButton.addEventListener("click", formClose);
+form.addEventListener("click", (evt) => {
+  if (
+    evt.target.classList.contains("form") ||
+    evt.target.classList.contains("form__close-button")
+  ) {
+    formClose();
+  }
+});
 form.addEventListener("submit", formSubmit);
