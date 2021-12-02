@@ -1,4 +1,4 @@
-.form__inner {
+.popup__container {
   width: 430px;
   background-color: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
@@ -14,7 +14,7 @@
   z-index: 2;
 }
 @media screen and (max-width: 767px) {
-  .form__inner {
+  .popup__container {
     width: 282px;
     padding: 25px 22px;
   }

@@ -11,12 +11,9 @@
 }
 @media screen and (max-width: 1040px) {
   .profile__name {
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 1040px) {
-  .profile__name {
     margin-right: 7px;
+    font-size: 30px;
+    max-width: 210px;
   }
 }
 

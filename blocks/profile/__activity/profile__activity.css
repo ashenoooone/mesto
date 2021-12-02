@@ -12,6 +12,7 @@
 @media screen and (max-width: 1040px) {
   .profile__activity {
     font-size: 16px;
+    max-width: 232px;
   }
 }
 @media screen and (max-width: 767px) {
