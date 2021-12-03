@@ -1,14 +1,15 @@
 .profile__add-button {
-  background-image: url(../../../images/AddButton.svg);
-  border: 0;
+  background-image: url(../../../images/plus.svg);
+  border: 2px solid #fff;
   width: 150px;
   height: 50px;
   margin: 35px 0 0;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-  background-size: cover;
   flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
   transition: opacity 0.2s ease;
 }
 .profile__add-button:hover {
@@ -18,6 +19,5 @@
   .profile__add-button {
     width: 282px;
     margin: 0;
-    background-image: url(../../../images/AddButton-767.svg);
   }
 }
