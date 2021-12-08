@@ -1,6 +1,10 @@
 .popup {
-  display: none;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
   position: fixed;
+  transition: all 0.3s linear;
+  opacity: 0;
   left: 0;
   top: 0;
   width: 100vw;

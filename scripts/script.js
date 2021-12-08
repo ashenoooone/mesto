@@ -7,6 +7,7 @@ const popupActivity = document.querySelector(".popup__input_type_activity");
 const profileName = document.querySelector(".profile__name");
 const profileActivity = document.querySelector(".profile__activity");
 const likeButton = document.querySelectorAll(".card__like-button");
+const addButton = document.querySelector(".profile__add-button");
 
 function popupOpen() {
   popup.classList.add("popup_active");
@@ -26,6 +27,7 @@ function popupSubmit(evt) {
 popupCloseButton.addEventListener("click", popupClose);
 popupOpenButton.addEventListener("click", popupOpen);
 popupForm.addEventListener("submit", popupSubmit);
+addButton.addEventListener("click", popupOpen);
 likeButton.forEach((item) => {
   item.addEventListener("click", () => {
     item.classList.toggle("card__like-button_active");
