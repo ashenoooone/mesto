@@ -53,7 +53,10 @@
           type="button"
           aria-label="закрыть"
         ></button>
-        <form class="popup__form" name="popupFormProfileEdit">
+        <form
+          class="popup__form popup__form_type_add_card"
+          name="popupFormAddCard"
+        >
           <input
             type="text"
             class="popup__input popup__input_type_name"
@@ -63,12 +66,12 @@
           />
           <input
             type="text"
-            class="popup__input popup__input_type_activity"
+            class="popup__input popup__input_type_link"
             placeholder="Ссылка на картинку"
-            name="inputActivity"
+            name="inputLink"
             required
           />
-          <button type="submit" class="popup__save-button" value="Сохранить">
+          <button type="submit" class="popup__save-button" value="Создаьт">
             Создать
           </button>
         </form>
@@ -83,7 +86,7 @@
           aria-label="закрыть"
         ></button>
         <form
-          class="popup__form popup__form_type_edit-profile"
+          class="popup__form popup__form_type_edit"
           name="popupFormProfileEdit"
         >
           <input
@@ -110,6 +113,11 @@
     </div>
     <template class="template__card"
       ><div class="card">
+        <button
+          class="card__delete-button"
+          aria-label="удалить"
+          type="button"
+        ></button>
         <img
           src="./images/karachaevsk.jpg"
           alt="Карачаевск"
