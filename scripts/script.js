@@ -9,7 +9,7 @@ const addButton = document.querySelector(".profile__add-button");
 const popupAddCard = document.querySelector(".popup_type_add-card");
 const popupEditProfile = document.querySelector(".popup_type_edit-profile");
 const elementsList = document.querySelector(".elements");
-const cardTemplate = document.querySelector("");
+const cardTemplate = document.querySelector(".template__card");
 const initialCards = [
   {
     name: "Архыз",
@@ -37,8 +37,16 @@ const initialCards = [
   },
 ];
 
-function renderInitialElemens() {}
-
+function renderInitialElemens() {
+  for (let i = 0; i < initialCards.length; i++) {
+    const newItem = cardTemplate.content.cloneNode(true).querySelector(".card");
+    newItem.querySelector(".card__title").textContent = initialCards[i].name;
+    newItem.querySelector(".card__title").alt = initialCards[i].name;
+    newItem.querySelector(".card__image").src = initialCards[i].link;
+    elementsList.insertAdjacentElement("beforeend", newItem);
+  }
+}
+renderInitialElemens();
 function popupSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = popupName.value;
