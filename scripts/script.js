@@ -1,5 +1,5 @@
-const popupEditForm = document.querySelector(".popup__form_type_edit");
-const popupAddCardForm = document.querySelector(".popup__form_type_add_card");
+const popupEditForm = document.querySelector(".popup__form_type-edit");
+const popupAddCardForm = document.querySelector(".popup__form_type_add-card");
 const editButton = document.querySelector(".profile__edit-button");
 const popupCloseButton = document.querySelectorAll(".popup__close-button");
 const popupEditName = document.querySelector(".popup__input_type_name");
