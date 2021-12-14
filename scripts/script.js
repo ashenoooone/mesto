@@ -14,7 +14,6 @@ const cardTemplate = document.querySelector(".template__card");
 const popupAddName = document.querySelector(".popup__input_type_name");
 const popupAddLink = document.querySelector(".popup__input_type_link");
 const popupZoomedCard = document.querySelector(".popup_type_zoomedCard");
-const page = document.querySelector(".page");
 const initialCards = [
   {
     name: "Архыз",
@@ -59,13 +58,13 @@ function createCard(cardName, cardLink) {
   });
   newItem.addEventListener("click", (item) => {
     if (item.target.classList.contains("card")) {
-      openZoomedCard(newItemTitle.textContent, newItemImage.src);
+      openPopupZoomedCard(newItemTitle.textContent, newItemImage.src);
     }
   });
   return newItem;
 }
 
-function openZoomedCard(cardTitle, cardImage) {
+function openPopupZoomedCard(cardTitle, cardImage) {
   popupZoomedCard.querySelector(".zoomedCard__title").textContent = cardTitle;
   popupZoomedCard.querySelector(".zoomedCard__image").alt = cardTitle;
   popupZoomedCard.querySelector(".zoomedCard__image").src = cardImage;
