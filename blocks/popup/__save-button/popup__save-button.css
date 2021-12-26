@@ -13,6 +13,7 @@
   border-radius: 2px;
   transition: opacity 0.2s ease;
   cursor: pointer;
+  box-sizing: border-box;
 }
 .popup__save-button:hover {
   background-color: rgba(0, 0, 0, 0.8);

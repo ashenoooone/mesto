@@ -11,9 +11,10 @@ const popupAddCard = document.querySelector(".popup_type_add-card");
 const popupEditProfile = document.querySelector(".popup_type_edit-profile");
 const elementsList = document.querySelector(".elements");
 const cardTemplate = document.querySelector(".template__card");
-const popupAddName = document.querySelector(".popup__input_type_name");
+const popupAddName = document.querySelector(".popup__input_type_title");
 const popupAddLink = document.querySelector(".popup__input_type_link");
 const popupZoomedCard = document.querySelector(".popup_type_zoomedCard");
+const popups = Array.from(document.querySelectorAll(".popup"));
 const initialCards = [
   {
     name: "Архыз",
@@ -88,6 +89,7 @@ function closePopup(popup) {
 
 function openPopup(popup) {
   popup.classList.add("popup_active");
+  document.addEventListener("keydown", (e) => {});
 }
 
 function popupAddCardSubmit(evt) {
@@ -126,3 +128,15 @@ addButton.addEventListener("click", () => {
   popupAddCardForm.reset();
 });
 popupAddCardForm.addEventListener("submit", popupAddCardSubmit);
+popups.forEach((popup) => {
+  popup.addEventListener("click", (e) => {
+    if (e.target.classList.contains("popup")) {
+      closePopup(popup);
+    }
+  });
+  document.addEventListener("keydown", (evt) => {
+    if (evt.key === "Escape") {
+      closePopup(popup);
+    }
+  });
+});
