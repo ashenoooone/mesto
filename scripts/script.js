@@ -73,12 +73,9 @@ function openPopupZoomedCard(cardTitle, cardImage) {
 }
 
 function renderInitialElemens() {
-  for (let i = 0; i < initialCards.length; i++) {
-    elementsList.insertAdjacentElement(
-      "beforeend",
-      createCard(initialCards[i].name, initialCards[i].link)
-    );
-  }
+  initialCards.forEach((card) => {
+    elementsList.append(createCard(card.name, card.link));
+  });
 }
 
 renderInitialElemens();
@@ -94,10 +91,7 @@ function openPopup(popup) {
 
 function popupAddCardSubmit(evt) {
   evt.preventDefault();
-  elementsList.insertAdjacentElement(
-    "afterbegin",
-    createCard(popupAddName.value, popupAddLink.value)
-  );
+  elementsList.prepend(createCard(popupAddName.value, popupAddLink.value));
   closePopup(evt.target.closest(".popup"));
 }
 
