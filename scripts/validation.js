@@ -48,7 +48,7 @@ const setEventListeners = (
       disableButton(inputList, button, inactiveButtonClass);
     });
     input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" && hasInvalidInput) {
+      if (e.key === "Enter" && hasInvalidInput(inputList)) {
         e.preventDefault();
       }
     });
