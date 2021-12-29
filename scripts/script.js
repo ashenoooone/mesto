@@ -80,13 +80,43 @@ function renderInitialElemens() {
 
 renderInitialElemens();
 
+function resetValidation(popup) {
+  const inputList = Array.from(popup.querySelectorAll(".popup__input"));
+  const button = popup.querySelector(".popup__save-button");
+  if (
+    inputList.some((input) => {
+      return !input.validity.valid;
+    })
+  ) {
+    button.classList.add("popup__save-button_inactive");
+  } else {
+    button.classList.remove("popup__save-button_inactive");
+  }
+  inputList.forEach((input) => {
+    const inputErrorSpan = popup.querySelector(`.${input.id}-error`);
+    input.classList.remove("popup__input_type_error");
+    inputErrorSpan.textContent = "";
+  });
+}
+
+let escapeHandler = (evt) => {};
+
+function addEscapeHandler(popup) {
+  return (escapeHandler = (evt) => {
+    if (evt.key === "Escape") {
+      closePopup(popup);
+    }
+  });
+}
+
 function closePopup(popup) {
+  document.removeEventListener("keydown", escapeHandler);
   popup.classList.remove("popup_active");
 }
 
 function openPopup(popup) {
+  document.addEventListener("keydown", addEscapeHandler(popup));
   popup.classList.add("popup_active");
-  document.addEventListener("keydown", (e) => {});
 }
 
 function popupAddCardSubmit(evt) {
@@ -112,24 +142,21 @@ popupCloseButtons.forEach((item) => {
   });
 });
 editButton.addEventListener("click", () => {
-  openPopup(popupEditProfile);
   popupEditName.value = profileName.textContent;
   popupEditActivity.value = profileActivity.textContent;
+  resetValidation(popupEditProfile);
+  openPopup(popupEditProfile);
 });
 popupEditForm.addEventListener("submit", popupEditProfileSubmit);
 addButton.addEventListener("click", () => {
-  openPopup(popupAddCard);
   popupAddCardForm.reset();
+  resetValidation(popupAddCard);
+  openPopup(popupAddCard);
 });
 popupAddCardForm.addEventListener("submit", popupAddCardSubmit);
 popups.forEach((popup) => {
   popup.addEventListener("click", (e) => {
     if (e.target.classList.contains("popup")) {
-      closePopup(popup);
-    }
-  });
-  document.addEventListener("keydown", (evt) => {
-    if (evt.key === "Escape") {
       closePopup(popup);
     }
   });

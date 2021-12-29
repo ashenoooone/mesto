@@ -19,10 +19,13 @@ const inputValidity = (form, input, inputErrorClass) => {
 };
 
 const disableButton = (inputList, button, inactiveButtonClass) => {
+  console.log(button);
   if (hasInvalidInput(inputList)) {
     button.classList.add(`${inactiveButtonClass}`);
+    button.disabled = true;
   } else {
     button.classList.remove(`${inactiveButtonClass}`);
+    button.disabled = false;
   }
 };
 
@@ -46,11 +49,6 @@ const setEventListeners = (
     input.addEventListener("input", (e) => {
       inputValidity(form, input, inputErrorClass);
       disableButton(inputList, button, inactiveButtonClass);
-    });
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" && hasInvalidInput(inputList)) {
-        e.preventDefault();
-      }
     });
   });
 };
