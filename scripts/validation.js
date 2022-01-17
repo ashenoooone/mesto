@@ -19,7 +19,6 @@ const inputValidity = (form, input, inputErrorClass) => {
 };
 
 const disableButton = (inputList, button, inactiveButtonClass) => {
-  console.log(button);
   if (hasInvalidInput(inputList)) {
     button.classList.add(`${inactiveButtonClass}`);
     button.disabled = true;

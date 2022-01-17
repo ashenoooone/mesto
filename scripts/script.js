@@ -99,24 +99,19 @@ function resetValidation(popup) {
   });
 }
 
-let escapeHandler = (evt) => {};
-
-function addEscapeHandler(popup) {
-  return (escapeHandler = (evt) => {
-    if (evt.key === "Escape") {
-      closePopup(popup);
-    }
-  });
-}
-
 function closePopup(popup) {
-  document.removeEventListener("keydown", escapeHandler);
   popup.classList.remove("popup_active");
+  document.removeEventListener("keydown", escapeHadler);
 }
 
 function openPopup(popup) {
-  document.addEventListener("keydown", addEscapeHandler(popup));
   popup.classList.add("popup_active");
+  document.addEventListener("keydown", escapeHadler);
+}
+
+function escapeHadler(evt) {
+  const popup = document.querySelector(".popup_active");
+  if (evt.key === "Escape") closePopup(popup);
 }
 
 function popupAddCardSubmit(evt) {
