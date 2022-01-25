@@ -4,7 +4,7 @@ export class FormValidator {
     this._inputSelector = data.inputSelector;
     this._submitButtonSelector = data.submitButtonSelector;
     this._inactiveButtonClass = data.inactiveButtonClass;
-    this._inputErrorClass = data.inoutErrorClass;
+    this._inputErrorClass = data.inputErrorClass;
   }
 
   _showErrorMessage(input, errorMessage) {
@@ -27,7 +27,7 @@ export class FormValidator {
     }
   }
 
-  _disableButton() {
+  _toggleButton() {
     if (this._hasInvalidInput()) {
       this._button.classList.add(this._inactiveButtonClass);
       this._button.disabled = true;
@@ -48,25 +48,19 @@ export class FormValidator {
       this._form.querySelectorAll(this._inputSelector)
     );
     this._button = this._form.querySelector(this._submitButtonSelector);
-    this._disableButton();
+    this._toggleButton();
     this._inputList.forEach((input) => {
       input.addEventListener("input", (e) => {
         this._inputValidity(input);
-        this._disableButton();
+        this._toggleButton();
       });
     });
   }
 
   resetValidation() {
-    if (this._hasInvalidInput()) {
-      this._button.classList.add(this._inactiveButtonClass);
-    } else {
-      this._button.classList.remove(this._inactiveButtonClass);
-    }
+    this._toggleButton();
     this._inputList.forEach((input) => {
-      const inputErrorSpan = this._form.querySelector(`.${input.id}-error`);
-      input.classList.remove(this._inputErrorClass);
-      inputErrorSpan.textContent = "";
+      this._hideErrorMessage(input);
     });
   }
 
