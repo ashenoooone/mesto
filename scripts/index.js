@@ -15,7 +15,7 @@ const popupEditProfile = document.querySelector(".popup_type_edit-profile");
 const elementsList = document.querySelector(".elements");
 const popupAddName = document.querySelector(".popup__input_type_title");
 const popupAddLink = document.querySelector(".popup__input_type_link");
-const popupZoomedCard = document.querySelector(".popup_type_zoomedCard");
+const popupZoomedCard = document.querySelector(".popup_type_zoomed-card");
 const popups = Array.from(document.querySelectorAll(".popup"));
 const formList = Array.from(document.querySelectorAll(".popup__form"));
 const formValidators = {};
@@ -36,9 +36,9 @@ formList.forEach((item) => {
 });
 
 export function openPopupZoomedCard(cardTitle, cardImage) {
-  popupZoomedCard.querySelector(".zoomedCard__title").textContent = cardTitle;
-  popupZoomedCard.querySelector(".zoomedCard__image").alt = cardTitle;
-  popupZoomedCard.querySelector(".zoomedCard__image").src = cardImage;
+  popupZoomedCard.querySelector(".zoomed-card__title").textContent = cardTitle;
+  popupZoomedCard.querySelector(".zoomed-card__image").alt = cardTitle;
+  popupZoomedCard.querySelector(".zoomed-card__image").src = cardImage;
   openPopup(popupZoomedCard);
 }
 

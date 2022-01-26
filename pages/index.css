@@ -48,11 +48,11 @@
 @import url(../blocks/popup/__input/_type/popup__input_type_name.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
-@import url(../blocks/popup/_type/popup_type_zoomedCard.css);
+@import url(../blocks/popup/_type/popup_type_zoomed-card.css);
 @import url(../blocks/popup/__input-error/popup__input-error.css);
 @import url(../blocks/popup/__save-button/_inactive/popup__save-button_inactive.css);
 @import url(../blocks/popup/__input/_type/popup__input_type_error.css);
-/* zoomedCard */
-@import url(../blocks/zoomedCard/zoomedCard.css);
-@import url(../blocks/zoomedCard/__title/zoomedCard__title.css);
-@import url(../blocks/zoomedCard/__image/zoomedCard__image.css);
+/* zoomed-card */
+@import url(../blocks/zoomed-card/zoomed-card.css);
+@import url(../blocks/zoomed-card/__title/zoomed-card__title.css);
+@import url(../blocks/zoomed-card/__image/zoomed-card__image.css);

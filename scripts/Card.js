@@ -14,7 +14,7 @@ export class Card {
   }
 
   _likeClickHandler() {
-    this._likeButton.classList.add("card__like-button_active");
+    this._likeButton.classList.toggle("card__like-button_active");
   }
 
   _deleteCardHandler() {
@@ -23,17 +23,7 @@ export class Card {
   }
 
   _openPopupHandler(evt) {
-    // данная проверка нужна т.к событие вешается на весь элемент сразу => будет
-    //  срабатывать при нажатии на любой дочерний элемент), а чтобы она работала только
-    //  при клике на картинку пришлось добавить такое условие,
-    //  (не вешал прослушиватель на картинку по той причине,
-    //  что затемнение делал через псевдоэлемент =>
-    //  при клике на кратинку тригерится именно .card), впринципе можно сделать
-    //  затемнение через box-shadow для картинки и тогда вешать прослушиватель
-    //  на картинку, но прошлые ревью пропустили и я решил что и так сойдет)
-    if (evt.target.classList.contains("card")) {
-      openPopupZoomedCard(this._name, this._link);
-    }
+    openPopupZoomedCard(this._name, this._link);
   }
 
   _setEventListeners() {
@@ -43,7 +33,7 @@ export class Card {
     this._deleteButton.addEventListener("click", () => {
       this._deleteCardHandler();
     });
-    this._element.addEventListener("click", (item) => {
+    this._imageElement.addEventListener("click", (item) => {
       this._openPopupHandler(item);
     });
   }
