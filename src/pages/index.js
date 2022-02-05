@@ -19,26 +19,17 @@ import { PopupWithImage } from "../components/PopupWithImage.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
 import "./index.css";
-const popupAddCard = new PopupWithForm(".popup_type_add-card", (evt) => {
-  evt.preventDefault();
+const popupAddCard = new PopupWithForm(".popup_type_add-card", (data) => {
   elements.addItem(
-    createCard(
-      popupAddCard._getInputValues().inputTitle,
-      popupAddCard._getInputValues().inputLink,
-      ".template__card"
-    ),
+    createCard(data.inputTitle, data.inputLink, ".template__card"),
     false
   );
   popupAddCard.close();
 });
 const popupEditProfile = new PopupWithForm(
   ".popup_type_edit-profile",
-  (evt) => {
-    evt.preventDefault();
-    userInfo.setUserInfo(
-      popupEditProfile._getInputValues().inputName,
-      popupEditProfile._getInputValues().inputActivity
-    );
+  (data) => {
+    userInfo.setUserInfo(data.inputName, data.inputActivity);
     popupEditProfile.close();
   }
 );

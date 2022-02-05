@@ -2,12 +2,13 @@ import { Popup } from "./Popup.js";
 export class PopupWithImage extends Popup {
   constructor(popupSelector) {
     super(popupSelector);
+    this._title = this._element.querySelector(".zoomed-card__title");
+    this._image = this._element.querySelector(".zoomed-card__image");
   }
   open(cardTitle, cardImage) {
-    this._element.querySelector(".zoomed-card__title").textContent = cardTitle;
-    this._element.querySelector(".zoomed-card__image").alt = cardTitle;
-    this._element.querySelector(".zoomed-card__image").src = cardImage;
-    this._element.classList.add("popup_active");
-    document.addEventListener("keydown", super._handleEscClose.bind(this));
+    this._title.textContent = cardTitle;
+    this._image.alt = cardTitle;
+    this._image.src = cardImage;
+    super.open();
   }
 }
