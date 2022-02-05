@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mesto</title>
-    <link rel="stylesheet" href="pages/index.css" />
   </head>
   <body class="body">
     <div class="page">
       <header class="header page__header">
-        <img src="./images/logo.svg" alt="логотип" class="logo" />
+        <img
+          src="<%=require('./images/logo.svg')%>"
+          alt="логотип"
+          class="logo"
+        />
       </header>
       <main class="content">
         <section class="profile content__section">
           <div class="profile__person">
             <img
-              src="./images/kusto.jpg"
+              src="<%=require('./images/kusto.jpg')%>"
               alt="Жак Ив Кусто"
               class="profile__avatar"
             />
@@ -130,8 +133,8 @@
     <div class="popup popup_type_zoomed-card">
       <figure class="zoomed-card">
         <button class="popup__close-button" type="button"></button>
-        <img src="/images/karachaevsk.jpg" alt="#" class="zoomed-card__image" />
-        <figcaption class="zoomed-card__title">karachaevsk</figcaption>
+        <img src="#" alt="#" class="zoomed-card__image" />
+        <figcaption class="zoomed-card__title"></figcaption>
       </figure>
     </div>
     <template class="template__card"
@@ -151,6 +154,6 @@
           ></button>
         </div></div
     ></template>
-    <script src="./scripts/index.js" type="module"></script>
+    <script src="./pages/index.js" type="module"></script>
   </body>
 </html>

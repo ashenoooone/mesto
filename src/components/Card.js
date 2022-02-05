@@ -1,9 +1,9 @@
-import { openPopupZoomedCard } from "./index.js";
 export class Card {
-  constructor(name, link, cardSelector) {
+  constructor(name, link, cardSelector, popup) {
     this._name = name;
     this._link = link;
     this._cardSelector = cardSelector;
+    this._popup = popup;
   }
   _getTemplate() {
     const card = document
@@ -22,8 +22,8 @@ export class Card {
     this._element = null;
   }
 
-  _openPopupHandler(evt) {
-    openPopupZoomedCard(this._name, this._link);
+  _openPopupHandler() {
+    this._popup.open(this._name, this._link);
   }
 
   _setEventListeners() {
