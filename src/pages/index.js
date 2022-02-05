@@ -12,6 +12,12 @@ import {
   addButton,
   formList,
   formValidators,
+  templateCardSelector,
+  profileNameSelector,
+  profileActivitySelector,
+  popupTypeAddCardSelector,
+  popupTypeEditProfileSelector,
+  popupTypeZoomedCardSelector,
 } from "../utils/constants.js";
 import { Section } from "../components/Section.js";
 import { Popup } from "../components/Popup.js";
@@ -19,21 +25,21 @@ import { PopupWithImage } from "../components/PopupWithImage.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
 import "./index.css";
-const popupAddCard = new PopupWithForm(".popup_type_add-card", (data) => {
+const popupAddCard = new PopupWithForm(popupTypeAddCardSelector, (data) => {
   elements.addItem(
-    createCard(data.inputTitle, data.inputLink, ".template__card"),
+    createCard(data.inputTitle, data.inputLink, templateCardSelector),
     false
   );
   popupAddCard.close();
 });
 const popupEditProfile = new PopupWithForm(
-  ".popup_type_edit-profile",
+  popupTypeEditProfileSelector,
   (data) => {
     userInfo.setUserInfo(data.inputName, data.inputActivity);
     popupEditProfile.close();
   }
 );
-const popupZoomedCard = new PopupWithImage(".popup_type_zoomed-card");
+const popupZoomedCard = new PopupWithImage(popupTypeZoomedCardSelector);
 popupZoomedCard.setEventListeners();
 popupEditProfile.setEventListeners();
 popupAddCard.setEventListeners();
@@ -41,7 +47,7 @@ const elements = new Section(
   {
     data: initialCards,
     renderer: (item) => {
-      const card = createCard(item.name, item.link, ".template__card");
+      const card = createCard(item.name, item.link, templateCardSelector);
       elements.addItem(card, true);
     },
   },
@@ -49,8 +55,8 @@ const elements = new Section(
 );
 elements.renderInitialCards();
 const userInfo = new UserInfo({
-  profileName: ".profile__name",
-  profileActivity: ".profile__activity",
+  profileName: profileNameSelector,
+  profileActivity: profileActivitySelector,
 });
 
 function createCard(name, link, templateClass) {
