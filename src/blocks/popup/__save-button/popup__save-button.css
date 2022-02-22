@@ -1,6 +1,5 @@
 .popup__save-button {
   padding: 0;
-  margin: 48px 0 0 0;
   border: 0;
   width: 358px;
   height: 50px;
@@ -14,6 +13,7 @@
   transition: opacity 0.2s ease;
   cursor: pointer;
   box-sizing: border-box;
+  margin-top: 48px;
 }
 .popup__save-button:hover {
   background-color: rgba(0, 0, 0, 0.8);

@@ -2,15 +2,5 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  margin-right: 30px;
-}
-@media screen and (max-width: 1040px) {
-  .profile__avatar {
-    margin-right: 13px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .profile__avatar {
-    margin: 0;
-  }
+  z-index: 0;
 }

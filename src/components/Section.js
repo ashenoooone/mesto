@@ -5,8 +5,10 @@ export class Section {
     this._items = data;
   }
   renderInitialCards() {
-    this._items.forEach((item) => {
-      this._renderer(item);
+    this._items.then((cards) => {
+      cards.forEach((card) => {
+        this._renderer(card);
+      });
     });
   }
   addItem(item, toEnd) {

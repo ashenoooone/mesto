@@ -18,21 +18,19 @@
       <main class="content">
         <section class="profile content__section">
           <div class="profile__person">
-            <img
-              src="<%=require('./images/kusto.jpg')%>"
-              alt="Жак Ив Кусто"
-              class="profile__avatar"
-            />
+            <div class="profile__image-container">
+              <img src="" alt="Жак Ив Кусто" class="profile__avatar" />
+            </div>
             <div class="profile__info">
               <div class="profile__container">
-                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <h1 class="profile__name"></h1>
                 <button
                   class="profile__edit-button"
                   type="button"
                   aria-label="редактировать"
                 ></button>
               </div>
-              <p class="profile__activity">Исследователь океана</p>
+              <p class="profile__activity"></p>
             </div>
           </div>
           <button
@@ -47,7 +45,6 @@
         <p class="footer__copyright">© 2020 Роман Гонтарь</p>
       </footer>
     </div>
-
     <div class="popup popup_type_add-card">
       <div class="popup__container">
         <h2 class="popup__title">Новое место</h2>
@@ -87,6 +84,32 @@
         </form>
       </div>
     </div>
+    <div class="popup popup_type_edit-avatar">
+      <div class="popup__container">
+        <h2 class="popup__title">Обновить аватар</h2>
+        <button class="popup__close-button" type="button"></button>
+        <form class="popup__form">
+          <input
+            type="url"
+            name="inputAvatarLink"
+            id="avatar-link-input"
+            class="popup__input popup__input_type_avatar-link"
+            placeholder="Ссылка на аватар"
+          />
+          <span class="popup__input-error avatar-link-input-error"></span>
+          <button class="popup__save-button" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup_type_delete-card">
+      <div class="popup__container">
+        <h2 class="popup__title">Вы уверенны?</h2>
+        <button class="popup__close-button" type="button"></button>
+        <form class="popup__form">
+          <button class="popup__save-button" type="submit">Да</button>
+        </form>
+      </div>
+    </div>
     <div class="popup popup_type_edit-profile">
       <div class="popup__container">
         <h2 class="popup__title">Редактировать профиль</h2>
@@ -102,7 +125,7 @@
         >
           <input
             type="text"
-            value="Жак-Ив Кусто"
+            value=""
             class="popup__input popup__input_type_name"
             placeholder="Имя"
             name="inputName"
@@ -114,7 +137,7 @@
           <span class="popup__input-error name-input-error"></span>
           <input
             type="text"
-            value="Исследователь океана"
+            value=""
             class="popup__input popup__input_type_activity"
             placeholder="Деятельность"
             name="inputActivity"
@@ -147,11 +170,14 @@
         <img src="#" alt="#" class="card__image" />
         <div class="card__info">
           <h2 class="card__title"></h2>
-          <button
-            class="card__like-button"
-            type="button"
-            aria-label="лайк"
-          ></button>
+          <div class="card__container">
+            <button
+              class="card__like-button"
+              type="button"
+              aria-label="лайк"
+            ></button>
+            <p class="card__like-counter"></p>
+          </div>
         </div></div
     ></template>
     <script src="./pages/index.js" type="module"></script>

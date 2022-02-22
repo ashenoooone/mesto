@@ -1,0 +1,31 @@
+.profile__image-container {
+  margin-right: 30px;
+  position: relative;
+}
+.profile__image-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+.profile__image-container:hover::before {
+  opacity: 0.8;
+  background-image: url("../../../images/Vector.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+@media screen and (max-width: 1040px) {
+  .profile__image-container {
+    margin-right: 13px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile__image-container {
+    margin: 0;
+  }
+}

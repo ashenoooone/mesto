@@ -1,30 +1,3 @@
-export const initialCards = [
-  {
-    name: "Архыз",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
-  },
-  {
-    name: "Челябинская область",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
-  },
-  {
-    name: "Иваново",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
-  },
-  {
-    name: "Камчатка",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
-  },
-  {
-    name: "Холмогорский район",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
-  },
-  {
-    name: "Байкал",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
-  },
-];
-
 export const validationSettings = {
   inputSelector: ".popup__input",
   submitButtonSelector: ".popup__save-button",
@@ -51,3 +24,27 @@ export const profileActivitySelector = ".profile__activity";
 export const popupTypeAddCardSelector = ".popup_type_add-card";
 export const popupTypeEditProfileSelector = ".popup_type_edit-profile";
 export const popupTypeZoomedCardSelector = ".popup_type_zoomed-card";
+export const profilePhotoSelector = ".profile__avatar";
+export const profileNameElement = document.querySelector(profileNameSelector);
+export const profileActivityElement = document.querySelector(
+  profileActivitySelector
+);
+export const profilePhotoElement = document.querySelector(profilePhotoSelector);
+export const popupDeleteCardSelector = ".popup_type_delete-card";
+export const avatarSelector = ".profile__avatar";
+export const avatarContainerElement = document.querySelector(
+  ".profile__image-container"
+);
+export const popupTypeEditAvatarSelector = ".popup_type_edit-avatar";
+export const popupTypeAddCardSubmitButton = document
+  .querySelector(popupTypeAddCardSelector)
+  .querySelector(".popup__save-button");
+export const popupTypeEditProfileSubmitButton = document
+  .querySelector(popupTypeEditProfileSelector)
+  .querySelector(".popup__save-button");
+export const popupDeleteCardSubmitButton = document
+  .querySelector(popupDeleteCardSelector)
+  .querySelector(".popup__save-button");
+export const popupTypeEditAvatarSubmitButton = document
+  .querySelector(popupTypeEditAvatarSelector)
+  .querySelector(".popup__save-button");
