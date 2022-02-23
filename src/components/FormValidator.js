@@ -5,6 +5,10 @@ export class FormValidator {
     this._submitButtonSelector = data.submitButtonSelector;
     this._inactiveButtonClass = data.inactiveButtonClass;
     this._inputErrorClass = data.inputErrorClass;
+    this._inputList = Array.from(
+      this._form.querySelectorAll(this._inputSelector)
+    );
+    this._button = this._form.querySelector(this._submitButtonSelector);
   }
 
   _showErrorMessage(input, errorMessage) {
@@ -44,10 +48,6 @@ export class FormValidator {
   }
 
   _setEventListeners() {
-    this._inputList = Array.from(
-      this._form.querySelectorAll(this._inputSelector)
-    );
-    this._button = this._form.querySelector(this._submitButtonSelector);
     this._toggleButton();
     this._inputList.forEach((input) => {
       input.addEventListener("input", (e) => {

@@ -9,7 +9,6 @@ export class Card {
     this._popup = popup;
     this._confirmationPopup = confirmationPopup;
     this._api = api;
-    this._response = response;
   }
   _getTemplate() {
     const card = document
@@ -20,19 +19,23 @@ export class Card {
   }
 
   _likeClickHandler() {
+    this._likeButton.classList.toggle("card__like-button_active");
+  }
+
+  _likeClickRequest() {
     if (!this._likeButton.classList.contains("card__like-button_active")) {
       this._api
         .putLike(this._element._cardId)
-        .then((res) => {
-          this._likeButton.classList.add("card__like-button_active");
+        .then(() => {
+          this._likeClickHandler();
           this._likesElement.textContent++;
         })
         .catch((err) => alert(err));
     } else {
       this._api
         .deleteLike(this._element._cardId)
-        .then((res) => {
-          this._likeButton.classList.remove("card__like-button_active");
+        .then(() => {
+          this._likeClickHandler();
           this._likesElement.textContent--;
         })
         .catch((err) => alert(err));
@@ -49,7 +52,7 @@ export class Card {
 
   _setEventListeners() {
     this._likeButton.addEventListener("click", () => {
-      this._likeClickHandler();
+      this._likeClickRequest();
     });
     this._deleteButton.addEventListener("click", () => {
       this._deleteCardHandler();
@@ -72,10 +75,10 @@ export class Card {
     this._imageElement.alt = this._name;
     this._element._cardId = this._id;
     this._element._owner = this._owner;
-    if (this._likes.some((el) => el._id == "f803110ccd9630f1871c1819")) {
-      this._likeButton.classList.add("card__like-button_active");
+    if (this._likes.some((el) => el._id == this._api.userId)) {
+      this._likeClickHandler();
     }
-    if (this._element._owner._id != "f803110ccd9630f1871c1819") {
+    if (this._element._owner._id != this._api.userId) {
       this._deleteButton.remove();
     }
     this._setEventListeners();
