@@ -36,6 +36,9 @@ export const avatarContainerElement = document.querySelector(
   ".profile__image-container"
 );
 export const popupTypeEditAvatarSelector = ".popup_type_edit-avatar";
+export const popupEditAvatarForm = document.querySelector(
+  ".popup__form_type_edit-avatar"
+);
 export const popupTypeAddCardSubmitButton = document
   .querySelector(popupTypeAddCardSelector)
   .querySelector(".popup__save-button");

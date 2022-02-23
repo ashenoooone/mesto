@@ -26,6 +26,7 @@ import {
   popupTypeEditProfileSubmitButton,
   popupDeleteCardSubmitButton,
   popupTypeEditAvatarSubmitButton,
+  popupEditAvatarForm,
 } from "../utils/constants.js";
 import { Section } from "../components/Section.js";
 import { PopupWithImage } from "../components/PopupWithImage.js";
@@ -54,9 +55,6 @@ api
     userInfo.setUserAvatar(profileInfo.avatar);
   })
   .catch((e) => alert(e));
-// не очень понял про Promise.all, как я понял из описания он позволяет выполнять несколько
-// промиссов сразу, но, чтобы profileInfo.id попало в экземляры класса кард надо чтобы сначала
-// пришли данные из getInitialProfileInfo
 
 const popupDeleteCard = new PopupWithConfirmation(
   popupDeleteCardSelector,
@@ -145,6 +143,7 @@ const elements = new Section(
       const card = createCard(item, templateCardSelector, popupDeleteCard, {
         putLike: api.putLike,
         deleteLike: api.deleteLike,
+        userId: userInfo.getUserInfo().id,
       });
       elements.addItem(card, true);
     },
@@ -184,5 +183,6 @@ addButton.addEventListener("click", () => {
 });
 
 avatarContainerElement.addEventListener("click", () => {
+  formValidators[popupEditAvatarForm.name].resetValidation();
   popupEditAvatar.open();
 });

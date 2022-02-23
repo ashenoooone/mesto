@@ -18,8 +18,13 @@ export class Card {
     return card;
   }
 
-  _likeClickHandler() {
+  _likeClickHandler(change = "no") {
     this._likeButton.classList.toggle("card__like-button_active");
+    if (change !== "no") {
+      change
+        ? this._likesElement.textContent++
+        : this._likesElement.textContent--;
+    }
   }
 
   _likeClickRequest() {
@@ -27,16 +32,14 @@ export class Card {
       this._api
         .putLike(this._element._cardId)
         .then(() => {
-          this._likeClickHandler();
-          this._likesElement.textContent++;
+          this._likeClickHandler(true);
         })
         .catch((err) => alert(err));
     } else {
       this._api
         .deleteLike(this._element._cardId)
         .then(() => {
-          this._likeClickHandler();
-          this._likesElement.textContent--;
+          this._likeClickHandler(false);
         })
         .catch((err) => alert(err));
     }
