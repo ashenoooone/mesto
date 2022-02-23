@@ -54,6 +54,9 @@ api
     userInfo.setUserAvatar(profileInfo.avatar);
   })
   .catch((e) => alert(e));
+// не очень понял про Promise.all, как я понял из описания он позволяет выполнять несколько
+// промиссов сразу, но, чтобы profileInfo.id попало в экземляры класса кард надо чтобы сначала
+// пришли данные из getInitialProfileInfo
 
 const popupDeleteCard = new PopupWithConfirmation(
   popupDeleteCardSelector,
